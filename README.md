@@ -89,6 +89,8 @@ charge: 40
 
 Charge adds stakes to long-running processes, acts as an accountability mechanism, and prevents unpredictable token spend.
 
+`chargebook.md` is the tuning surface for that model. Each cast has an explicit cost there. If a ritual is too eager to branch, search, or delegate, you change the cost once in `chargebook.md` instead of rewriting the ritual itself. That makes rituals easier to reason about and keeps their behavior more predictable over time.
+
 ## Memory
 
 The system should not overwhelm the spirits. Active memory consolidation is a best-practice for a healthy system.
@@ -108,7 +110,8 @@ The clean default is:
 
 - `artifacts/` and `questbook/` are shared between spirit and summoner
 - `spirits/`, `grimoire/`, and `vessel/` are spirit-side internals
-- The primary spirit should not edit `spirits/` directly
+- A spirit may maintain its own `spirits/<name>/memories/` and `cornerstone.md`
+- Ritual files under `spirits/<name>/rituals/` should be treated as read-only during normal execution
 - `adept` should stay small and always-open
 - Any stronger capability should live in an optional spellbook
 - A spirit only gets optional capability through `available_spellbooks`
@@ -127,7 +130,7 @@ During invocation, the system should also create a `warden` spirit.
 
 `warden` is the dedicated security and hardening spirit. It should inspect the system on a regular cadence, look for risky defaults, permission drift, exposure mistakes, secret-handling problems, and transport weaknesses, and then report or remediate within the bounds the summoner set. The primary orchestrator spirit should not be the only line of defense.
 
-By default, the primary orchestrator spirit should have a narrow always-open surface and should only be able to cast inside the shared working surfaces it was actually given, usually `artifacts/` and `questbook/`. That keeps the initial risk low even if a web-facing search encounters hostile content. Widen permissions deliberately, not casually, and let `warden` keep watch.
+By default, the primary orchestrator spirit should have a narrow always-open surface and should mostly work in the shared surfaces it was actually given, usually `artifacts/` and `questbook/`. The main exception is spirit-local self-maintenance: its own `cornerstone.md` and memories. Ritual files should stay stable unless the summoner deliberately changes them. That keeps the initial risk low even if a web-facing search encounters hostile content. Widen permissions deliberately, not casually, and let `warden` keep watch.
 
 ## Filesystem
 

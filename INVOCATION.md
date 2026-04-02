@@ -53,6 +53,7 @@ Third circle: instantiate the scaffold
 
 - Build the runtime from the markdown manifests.
 - Keep `identity.md`, `cornerstone.md`, rituals, spellbooks, casts, and chargebook legible.
+- Keep `chargebook.md` as the clear tuning surface for cast costs so ritual behavior stays predictable.
 - Instantiate at least one real foreground transport for the primary spirit. This can be terminal chat, Signal, web chat, or another explicit thread surface, but it must be concrete and operable.
 - Make the summoner-to-spirit path obvious. The summoner should be able to answer one question cleanly: "how do I talk to my orchestrator spirit?"
 - Create the shared daily thread ledger under `vessel/state/<spirit>/conversations/<local-date>.jsonl`.
@@ -66,6 +67,8 @@ Third circle: instantiate the scaffold
   - `memories/long-term.md` as compact top-of-head memory
   - `memories/window/` as the rolling recent-memory window
   - the rest of `memories/` as durable searchable storage
+- Allow the primary spirit to maintain its own `cornerstone.md` and memories if the summoner wants adaptive behavior.
+- Do not let ordinary execution rewrite ritual files.
 - Keep `adept` universal and always open.
 - Keep optional spellbooks openable according to `available_spellbooks`.
 - Keep long work in workings instead of blocking the foreground thread.

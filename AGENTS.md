@@ -60,6 +60,7 @@ These should hold across the system:
 - never claim a write, send, search, or publish happened unless it actually succeeded
 - correct implied but false state changes plainly
 - treat the shared daily thread as the canonical ledger
+- allow a spirit to maintain its own `cornerstone.md` and `memories/` when the design calls for it
 - treat ritual files as read-only during execution
 
 ## Spellbook Design
@@ -118,6 +119,8 @@ Emanations are the clearest example of the model. They show that widening work i
 
 The charge model should stay easy to understand at a glance.
 
+Keep `chargebook.md` as the single tuning surface for cast costs. If a ritual is over-branching or spending too freely, adjust the relevant cast cost there instead of scattering cost logic through ritual prose.
+
 ## Memory Design
 
 Keep memory layered:
@@ -143,7 +146,8 @@ Keep storage roles distinct:
 - `artifacts/` for the main shared work product surface between spirit and summoner
 - `questbook/` for the main shared obligation and continuity surface between spirit and summoner
 - `grimoire/portals/` for always-on surfaces
-- `spirits/<name>/` for spirit-local prompts, rituals, and memories
+- `spirits/<name>/cornerstone.md` and `spirits/<name>/memories/` for spirit-local self-maintenance
+- `spirits/<name>/rituals/` for spirit-local ritual law that should stay stable during ordinary execution
 - `vessel/state/` for machine-local runtime records, including daily conversation ledgers
 - `vessel/backups/` for local repository mirrors and backup worktrees
 - `vessel/venvs/` for isolated helper runtimes used by local utilities
