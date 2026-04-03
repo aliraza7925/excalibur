@@ -2,7 +2,7 @@
 name: "kimi_emanation"
 description: "Spawn an alternate reasoning-model emanation through an optional alternate provider while keeping the active spell surface for this run."
 ---
-Placeholder cast manifest for the `hyperobject` scaffold.
+Placeholder cast manifest for the Excalibur scaffold.
 
 In a full implementation, each cast lives in its own folder under `grimoire/spellbooks/<book>/<cast>/`.
 This scaffold keeps only the descriptive `spell.md` layer and omits handlers and runtime code.

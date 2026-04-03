@@ -12,7 +12,7 @@ Keep the system simple and explicit:
 - one top-level `spirits/` tree for spirit identity, prompts, rituals, and memories
 - one top-level `artifacts/` tree for durable outputs
 - one top-level `questbook/` tree for obligations and continuity
-- one internal `grimoire/` for spellbooks, runtime code stubs, and operator docs
+- one internal `grimoire/` for spellbooks, runtime code stubs, and summoner docs
 - one universal always-open spellbook in `grimoire/spellbooks/adept/`
 - optional spellbooks under `grimoire/spellbooks/<book>/`
 - one cast per folder at `grimoire/spellbooks/<book>/<cast>/spell.md`

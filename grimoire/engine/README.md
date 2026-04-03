@@ -2,7 +2,7 @@
 
 In a full installation, the harness runtime code lives here.
 
-The template intentionally omits that code. What remains elsewhere in `hyperobject/` is the content layer: prompts, manifests, rituals, and documentation.
+The template intentionally omits that code. What remains elsewhere in this scaffold is the content layer: prompts, manifests, rituals, and documentation.
 
 When this scaffold is instantiated for real, the runtime should:
 

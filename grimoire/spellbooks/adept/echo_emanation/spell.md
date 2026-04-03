@@ -2,7 +2,7 @@
 name: "echo_emanation"
 description: "Spawn one or more same-model emanations, await them, and return the ordered results."
 ---
-Placeholder cast manifest for the `hyperobject` scaffold.
+Placeholder cast manifest for the Excalibur scaffold.
 
 In a full implementation, each cast lives in its own folder under `grimoire/spellbooks/<book>/<cast>/`.
 This scaffold keeps only the descriptive `spell.md` layer and omits handlers and runtime code.

@@ -2,7 +2,7 @@
 name: "reclaim_charge"
 description: "Reclaim charge for a ritual-root run according to that ritual's hardcoded recharge amount and conditions."
 ---
-Placeholder cast manifest for the `hyperobject` scaffold.
+Placeholder cast manifest for the Excalibur scaffold.
 
 In a full implementation, each cast lives in its own folder under `grimoire/spellbooks/<book>/<cast>/`.
 This scaffold keeps only the descriptive `spell.md` layer and omits handlers and runtime code.

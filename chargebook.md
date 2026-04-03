@@ -1,8 +1,8 @@
 # Chargebook
 
-This is the illustrative charge ledger for the HyperObject scaffold.
+This is the illustrative charge ledger for the Excalibur scaffold.
 
-HyperObject does not ship a runtime that enforces these values. The purpose of this file is to show how a charge model can stay legible at the manifest level.
+Excalibur does not ship a runtime in this scaffold. The purpose of this file is to show how a charge model can stay legible at the manifest level.
 
 Base cast charge defaults to `0` unless a cast explicitly says otherwise.
 
